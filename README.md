@@ -1,3 +1,37 @@
+# Node-WS
+
+一个用于 VLESS 节点订阅与心跳保活的 Node.js 服务。
+
+## 功能
+
+- 提供 VLESS 格式的订阅链接 `/sub`（Base64 编码）
+- 定时自动访问 `/sub` 路径进行保活（默认每 5 分钟）
+- 可接入哪吒探针作为心跳服务
+
+## 环境变量
+
+| 变量名       | 说明                                                   |
+| ------------ | ------------------------------------------------------ |
+| UUID         | VLESS 节点 UUID                                        |
+| DOMAIN       | 部署服务所绑定的域名                                   |
+| AUTO_ACCESS  | 是否自动定期访问 `/sub` 路径进行保活，设为 `true` 启用 |
+| SUB_PATH     | 可自定义订阅路径，默认 `sub`                           |
+| NAME         | 节点名称后缀                                           |
+| NEZHA_SERVER | 哪吒服务端地址（含端口）                               |
+| NEZHA_PORT   | 哪吒服务端端口                                         |
+| NEZHA_KEY    | 哪吒节点密钥                                           |
+
+## 使用
+
+```bash
+npm install
+npm start
+```
+
+建议部署平台：Railway / Render / Replit
+
+
+
 # 安装  
 
 ```bash 
