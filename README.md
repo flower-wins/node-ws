@@ -68,17 +68,16 @@ markdown
 设置环境变量（可通过 .env 文件或部署平台的环境变量配置）：
 
 bash
-复制
-编辑
 export UUID=your-uuid
-export DOMAIN=your.domain.com
-export AUTO_ACCESS=true
-export ACCESS_INTERVAL=600000  # 10 分钟
-启动服务：
 
+export DOMAIN=your.domain.com
+
+export AUTO_ACCESS=true
+
+export ACCESS_INTERVAL=600000  # 10 分钟
+
+启动服务：
 bash
-复制
-编辑
 npm start
 注意事项
 订阅链接访问路径为：https://your.domain.com/sub，其中 sub 可通过 SUB_PATH 环境变量自定义。
